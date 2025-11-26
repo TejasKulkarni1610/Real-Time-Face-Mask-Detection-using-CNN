@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Face Mask Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #video-container {
+            margin-top: 20px;
+            border: 5px solid #ccc;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #video-feed {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .instructions {
+            margin-top: 30px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Face Mask Detection System</h1>
+    <p class="instructions">Open your webcam to detect mask status.</p>
+
+    <div id="video-container">
+        <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Live Video Feed">
+    </div>
+
+    <div class="instructions">
+        Note: Detection results (Mask OK or Please Wear Mask) are drawn directly onto the live video feed.
+    </div>
+
+</body>
+</html>
